@@ -24,6 +24,7 @@ class Blog extends Model
   public function getItem(
     int $id
   ): array|bool {
+    // TODO Need to change to bind
     $statement = $this->get_db_connection()->prepare(
       "SELECT * FROM blog WHERE id={$id}"
     );
@@ -64,7 +65,7 @@ class Blog extends Model
     if (!$this->getItem($id)) {
       return false;
     }
-
+    // TODO Need to change to bind
     $statement = $this->get_db_connection()->prepare(
       "DELETE FROM blog WHERE id=${id};"
     );

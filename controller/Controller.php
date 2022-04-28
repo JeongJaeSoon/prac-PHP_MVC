@@ -3,7 +3,6 @@
 namespace controller;
 
 use model\Model;
-use controller\TopController;
 
 class Controller
 {
