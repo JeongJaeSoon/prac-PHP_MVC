@@ -18,11 +18,6 @@ class Application
     }
   }
 
-  public function test()
-  {
-    var_dump("1");
-  }
-
   private static function validateUrl(
     String $url,
     array $routes

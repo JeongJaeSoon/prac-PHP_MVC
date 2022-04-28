@@ -14,18 +14,16 @@
   require_once "view/contents/top_index.php";
   $isErr = array_key_exists('key', $data) && array_key_exists('value', $data);
 
+  $url = _GET_REQUEST_URI()[1];
+  $displayText = [
+    "/search" => "検索",
+    "/delete" => "削除"
+  ];
   // _CHECK_DATA($data);
   ?>
-  <form action="/search" method="GET">
+  <form action="<?= $url ?>" method="GET">
     <?php if (count($data) === 0 || $isErr) { ?>
     <label for="blogId">
-      <?php
-        $url = _GET_REQUEST_URI()[1];
-        $displayText = [
-          "/search" => "検索",
-          "/delete" => "削除"
-        ];
-        ?>
       <?= "{$displayText["{$url}"]}ID：" ?>
       <input type="text" name="id" id="blogId" required>
       <input type="submit" value="送信">
