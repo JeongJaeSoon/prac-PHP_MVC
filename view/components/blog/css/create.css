@@ -1,0 +1,31 @@
+.article div {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.article span {
+  position: absolute;
+  display: inline-block;
+}
+
+.article input[type="text"],
+.article textarea {
+  margin-left: 55px;
+}
+
+.article input[type="text"] {
+  width: 60%;
+}
+
+.article textarea {
+  width: 75%;
+  resize: none;
+}
+
+.article textarea#overview {
+  height: 40px;
+}
+
+.article textarea#contents {
+  height: 160px;
+}

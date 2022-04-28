@@ -2,6 +2,7 @@
 
 namespace controller;
 
+use model\Model;
 use controller\TopController;
 
 class Controller
@@ -9,12 +10,13 @@ class Controller
   /**
    * 
    */
+
   public function __construct()
   {
-    // echo "Controller";
+    new Model();
   }
 
-  public static function render($viewUrl)
+  public static function render($viewUrl, $data = null)
   {
     include_once("view/$viewUrl.php");
   }

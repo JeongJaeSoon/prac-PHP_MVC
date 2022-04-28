@@ -11,13 +11,16 @@ class Application
    */
   public function __construct()
   {
-    $request_url = $_SERVER['REQUEST_URI'];
-    $url = explode("?", $request_url)[0];
-
+    [$_, $url] = _GET_REQUEST_URI();
 
     if (self::validateUrl($url, _ROUTES)) {
       Controller::run(_ROUTES[$url]);
     }
+  }
+
+  public function test()
+  {
+    var_dump("1");
   }
 
   private static function validateUrl(

@@ -12,6 +12,6 @@ class TopController extends Controller
 
   public function index()
   {
-    echo "index";
+    $this->render('main');
   }
 }
